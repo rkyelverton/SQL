@@ -1,0 +1,24 @@
+--Create a grocery store database
+
+create table grocery_store (id integer primary key, item text, aisle integer, price integer, number_sold integer);
+
+insert into grocery_store
+values
+(1, 'orange', 2, 3.00, 20),
+(2, 'bananas', 2, 3.00, 14),
+(4, 'chicken breast', 5, 5.50, 28),
+(5, 'pasta', 7, 1.50, 2),
+(6, 'peanu butter', 4, 6.00, 2),
+(7, 'chicken stock', 7, 5, 6),
+(8, 'soda', 2, 2, 10),
+(9, 'sabdwich meat', 10, 3, 12),
+(10, 'sliced cheese', 10, 2, 15),
+(11, 'bread', 7, 4, 18),
+(12, 'chocolates', 8, 20, 20),
+(13, 'guiness', 12, 12, 25),
+(14, 'kiwis', 2, 1, 5),
+(15, 'pizza', 13, 13, 11);
+
+Select item, (number_sold*price) as revenue_earned from store
+group by item
+order by price;
